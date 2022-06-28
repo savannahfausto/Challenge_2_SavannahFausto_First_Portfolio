@@ -25,6 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    margin: 20px 0;
 }
 
 h1 {
@@ -37,20 +38,33 @@ h1 {
     padding: 10px 5px 10px 50px;
 }
 
-nav ul {
+nav {
+    width: 40%;
+    margin-right: 10px;
+}
+
+nav ul, .contact-me-container ul {
     display: flex;
     justify-content: space-between;
-    min-width: 525px;
+    width: 100%;
     margin-right: 20px;
 }
 
-nav a {
+.contact-me-container ul {
+    width: 60%;
+}
+
+nav a, section a {
     color: var(--orange);
     font-weight: bold;
     text-decoration: none;
     font-size: 20px;
     padding-bottom: 2px;
     border-bottom: 5px solid var(--sky);
+}
+
+section a {
+    font-size: 16px;
 }
 
 .section-1 {
@@ -85,7 +99,7 @@ nav a {
     font-size: 40px;
 }
 
-.about-me-container {
+.about-me-container, .contact-me-container {
     display: flex; 
     justify-content: space-between;
     align-items: center; 
@@ -93,7 +107,7 @@ nav a {
     background-color: var(--midnight);
 }
 
-.about-me-container h3 {
+.about-me-container h3, .contact-me-container h3 {
     background-image: var(--bubbles);
     background-size: contain;
     font-size: 50px;
@@ -101,6 +115,9 @@ nav a {
     margin: 10px;
     text-align: right;
     color: var(--midnight);
+}
+
+.about-me-container h3 {
     height: 200px;
 }
 
@@ -125,6 +142,7 @@ nav a {
     display: grid;
     justify-content: center;
     column-gap: 100px;
+    row-gap; 100px;
 }
 
 .works {
@@ -134,6 +152,16 @@ nav a {
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.works a {
+    display: none;
+}
+
+.works:hover a {
+    display: block;
+    font-size: 40px;
+    color: var(--midnight);
 }
 
 .works h4, .works p {
@@ -150,6 +178,13 @@ nav a {
     background-size: contain;
     filter: brightness(65%); 
 }
+.works-small:hover {
+    width: 250px;
+    height: 250px;
+    background-image: url(./future-work.png);
+    background-size: contain;
+    filter: brightness(100%); 
+}
 
 .works-small h4 {
     font-size: 20px;
@@ -161,6 +196,14 @@ nav a {
     background-image: url(./work-3.png);
     background-size: 600px 600px;
     filter: brightness(65%);
+}
+
+.works-large:hover {
+    width: 650px; 
+    height: 650px;
+    background-image: url(./work-3.png);
+    background-size: 600px 600px;
+    filter: brightness(100%);
 }
 
 .works-large h4 {
@@ -192,10 +235,47 @@ nav a {
     grid-row: 5/6;
 }
 
-@media screen and (max-width: 993px) {
-    header,
-    main {
+.contact-me-container {
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 1226px) {
+    .works-container {
+        row-gap: 50px;
+    }
+    .work1 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    
+    .work2 {
+        grid-column: 3/4;
+        grid-row: 4/5;  
+    }
+    
+    .work3 {
+        grid-column: 1/4;
+        grid-row: 1/4; 
+    }
+    
+    .work4 {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    
+    .work5 {
+        grid-column: 3/4;
+        grid-row: 6/7;
+    }
+}
+
+@media screen and (max-width: 1089px) {
+    header {
       flex-direction: column;
+    }
+    nav {
+        width: 60%;
+        margin-right: 0px;
     }
 
     h1 {
@@ -205,4 +285,118 @@ nav a {
         text-align: center;
         color: var(--midnight);
     }
+}
+
+@media screen and (max-width: 827px) {
+    .about-me-container, .contact-me-container {
+       flex-direction: column;
+    }
+    
+    .about-me-container h3, .contact-me-container h3 {
+        height: 75px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about-me-container p {
+        border-top: 5px solid var(--sky);
+        border-left: 0px;
+    }
+
+    .contact-me-container {
+        margin: 0;
+    }
+
+    .contact-me-container ul {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 668px) {
+    header {
+        text-align: center;
+    }
+
+    h1 {
+        margin-right: 5px;
+    }
+
+    nav ul, .contact-me-container ul {
+        display: block;
+    }
+
+    nav li, .contact-me-container li {
+        margin: 20px 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sub-title h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .works-large {
+        width: 250px; 
+        height: 250px;
+        background-size: 250px 250px;
+    }
+    
+    .works-large:hover {
+        width: 300px; 
+        height: 300px;
+        background-size: 300px 300px;
+    }
+    .works-large h4 {
+        font-size: 20px;
+    }
+
+    .works-small {
+        margin-left: 25px;
+    }
+
+    .work1 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    .work2 {
+        grid-column: 1/2;
+        grid-row: 3/4;  
+    }
+    
+    .work3 {
+        grid-column: 1/2;
+        grid-row: 1/2; 
+    }
+    
+    .work4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    
+    .work5 {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .contact-me-container h3 {
+         font-size: 50px;
+         text-align: center;
+         height: 75px;
+     }
+
+    .contact-me-container li {
+        text-align: left;
+        margin-left: 0px;
+    }
+
+    section ul {
+        width: 100%;
+        margin-left: 20px;
+    }
+    
 }
