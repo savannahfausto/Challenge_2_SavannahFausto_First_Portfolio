@@ -39,4 +39,4 @@ Besides updating the webpage when more works are completed, I would like to make
 ![Screenshot of deployed Portfolio](./Assets/Portfolio3.png)
 
 ##Link to Savannah Fausto's Porfolio
-[Savannah Fausto's Porfolio]()
+[Savannah Fausto's Porfolio](https://savannahfausto.github.io/Challenge_2_SavannahFausto_First_Portfolio/)
