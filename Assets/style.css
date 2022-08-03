@@ -196,10 +196,18 @@ section a {
     font-size: 20px;
 }
 
+.work2 {
+    background-image: url(./work-3.png);
+}
+
+.work2:hover {
+    background-image: url(./work-3.png);
+}
+
 .works-large {
     width: 600px; 
     height: 600px;
-    background-image: url(./work-3.png);
+    background-image: url(./start-page.png);
     background-size: 600px 600px;
     filter: brightness(65%);
 }
@@ -208,7 +216,7 @@ section a {
 .works-large:hover {
     width: 650px; 
     height: 650px;
-    background-image: url(./work-3.png);
+    background-image: url(./start-page.png);
     background-size: 600px 600px;
     filter: brightness(100%);
 }
